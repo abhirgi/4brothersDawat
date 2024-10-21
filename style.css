@@ -4,11 +4,7 @@ body {
     padding: 0;
 }
 
-header {
-    background: linear-gradient(to right, #ff7e5f, #feb47b); /* Gradient from peach to yellow */
-    padding: 80px 0; /* Increased padding for a better visual */
-    text-align: center;
-}
+
 
 .navbar {
     position: sticky; /* Keeps the navbar fixed at the top */
@@ -47,22 +43,13 @@ footer {
 }
 
 
-header {
-    background: 
-   
-    url('assets/customer.jfif'); /* Replace with your background image path */
-background-size: cover; /* Ensures the image covers the entire header */
-background-position: center; /* Centers the background image */
-padding: 80px 0;
-text-align: center;
-transition: background 0.5s ease; /* Smooth transition for background */
-}
 
 
 
 header h1 {
     font-size: 2.5rem;
     transition: color 0.5s ease; /* Smooth transition for text color */
+    
 }
 
 header p {
