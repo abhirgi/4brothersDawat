@@ -92,8 +92,6 @@
             background: url('./assets/bg2.png') no-repeat center center;
             background-size: cover;
             /* Ensures the image covers the entire area */
-            background-attachment: fixed;
-            /* Keeps the background fixed during scroll */
             height: 100vh;
             /* Full viewport height */
             padding: 0;
@@ -103,14 +101,12 @@
 
         @media (max-width: 768px) {
             header {
-                background-attachment: scroll;
-                /* Disable fixed background on smaller screens */
                 height: 80vh;
                 /* Adjust height for smaller screens */
-                min-height: 60vh;
-                /* Set a minimum height to ensure visibility */
-                background-position: center top;
-                /* Adjust position for better visual on small screens */
+                background-attachment: scroll;
+                /* Disable fixed background on smaller screens */
+                background-position: center;
+                /* Center the background */
             }
 
             .logo {
@@ -131,12 +127,12 @@
 
         @media (max-width: 576px) {
             header {
-                height: 70vh;
+                height: 60vh;
                 /* Further adjust height for very small screens */
-                min-height: 50vh;
-                /* Optional: Set a minimum height */
                 background-position: center;
-                /* Center the background for very small screens */
+                /* Center the image */
+                background-size: cover;
+                /* Keep it covering the area */
             }
         }
     </style>
