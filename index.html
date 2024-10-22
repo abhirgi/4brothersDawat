@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,96 +10,142 @@
         /* Circular logo */
         .logo {
             border-radius: 37%;
-            width: 150px;
-            height: 150px;
+            width: 25vw;
+            /* Responsive size */
+            height: auto;
+            /* Maintain aspect ratio */
             object-fit: cover;
-            margin-left:-10px;
+            margin-left: -1vw;
+            /* Adjusted for responsiveness */
         }
+
         /* Circular images for feedback */
         .customer-img {
             border-radius: 50%;
-            width: 80px;
-            height: 80px;
+            width: 15vw;
+            /* Responsive size */
+            height: 15vw;
+            /* Responsive size */
             object-fit: cover;
-            margin-right: 15px;
+            margin-right: 2vw;
+            /* Adjusted for responsiveness */
         }
+
         .customer-feedback {
-            margin-bottom: 30px;
+            margin-bottom: 4vw;
+            /* Adjusted for responsiveness */
         }
+
         /* Map styling */
         .map-container {
             width: 100%;
-            height: 300px;
+            height: 50vh;
+            /* Increased height for better visibility */
+        }
+
+        /* Header styling */
+        header {
+            background: url('./assets/bg1.jfif') no-repeat center center;
+            background-size: cover;
+            /* Ensures the image covers the entire area */
+            background-attachment: fixed;
+            /* Keeps the background fixed during scroll */
+            height: 100vh;
+            /* Full viewport height */
+            padding: 0;
+            /* Remove padding for full height */
+            transition: background 0.5s ease;
+        }
+
+        @media (max-width: 768px) {
+            header {
+                background-attachment: scroll;
+                /* Disable fixed background on smaller screens */
+                height: 80vh;
+                /* Adjust height for smaller screens */
+                min-height: 70vh;
+                /* Optional: Set a minimum height */
+            }
+
+            .logo {
+                width: 50vw;
+                /* Adjust logo size for mobile */
+            }
+
+            h1 {
+                font-size: 2rem;
+                /* Adjust heading size for mobile */
+            }
+
+            p {
+                font-size: 1.2rem;
+                /* Adjust paragraph size for mobile */
+            }
         }
     </style>
 </head>
+
 <body>
 
-    <header style="background: url('./assets/bg1.jfif'); 
-    background-size: cover; 
-    background-position: center; 
-    height: 100vh; /* Full viewport height */
-    padding: 0; /* Remove padding for full height */
-    transition: background 0.5s ease;" 
-class="d-flex flex-column justify-content-center text-white">
+    <header class="d-flex flex-column justify-content-center text-white">
+        <div class="container">
+            <!-- <div class="row align-items-center">
+                <div class="col-3">
+                    <img src="assets/logo.jfif" alt="4Brothers Dawat Logo" class="logo">
+                </div>
+                <div class="col-9 text-center">
+                    <h1 style="color: #334fbb;">Welcome to 4Brothers Dawat Restaurant</h1>
+                    <p style="color: #392541;">Surety of purity</p>
+                </div>
+            </div> -->
+        </div>
+    </header>
 
-<div class="container">
-<div class="row align-items-center">
-<div class="col-3"> <!-- Adjust the column width as needed -->
-    <img src="assets/logo.jfif" alt="4Brothers Dawat Logo" class="logo">
-</div>
-<div class="col-9 text-center"> <!-- Center the text in the remaining space -->
-    <h1 style="color: #334fbb;">Welcome to 4Brothers Dawat Restaurant</h1>
-    <p style="color: #392541;">Surety of purity</p>
-</div>
-</div>
-</div>
-</header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light shadow">
+        <a class="navbar-brand" href="#">4Brothers Dawat</a>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#menu">Menu</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#reservation">Reservation</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#feedback">Feedback</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contact">Contact Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#profile">Profile</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
 
-<nav class="navbar navbar-expand-lg navbar-light bg-light shadow">
-    <a class="navbar-brand" href="#">4Brothers Dawat</a>
-    <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ml-auto">
-            <li class="nav-item active">
-                <a class="nav-link" href="#menu">Menu</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#reservation">Reservation</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#feedback">Feedback</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#contact">Contact Us</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#profile">Profile</a>
-            </li>
-        </ul>
-    </div>
-</nav>
-
-<div class="container my-5">
-    <div class="row">
-        <div class="col-md-8">
-            <div class="row mb-4">
-                <section id="map" >
+    <div class="container my-5">
+        <div class="row">
+            <div class="col-md-8">
+                <section id="map">
                     <h2 class="text-center mb-4">Our Location</h2>
                     <div class="map-container">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4404.184694183423!2d81.2555873!3d26.220288099999994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399ba75f95a4576d%3A0x855b6581b417207e!2s4Brothers%20Daawat%20Restaurant!5e1!3m2!1sen!2sin!4v1729510381707!5m2!1sen!2sin" width="600" height="320" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4404.184694183423!2d81.2555873!3d26.220288099999994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399ba75f95a4576d%3A0x855b6581b417207e!2s4Brothers%20Daawat%20Restaurant!5e1!3m2!1sen!2sin!4v1729510381707!5m2!1sen!2sin"
+                            style="border:0; width: 100%; height: 100%;" allowfullscreen="" loading="lazy"></iframe>
                     </div>
                 </section>
-            </div>
-            <div class="row ">
-                <section id="menu" >
-                    <h2 class="text-center mb-4">Our Menu</h2>
+                <section id="menu" class="my-4">
+                    <h2 class="text-center mb-4">Our Mouth watering dishes</h2>
                     <div class="row">
                         <div class="col-md-4 mb-4">
                             <div class="card shadow border-light">
                                 <img src="assets/f1.jpg" class="card-img-top" alt="Dish 1">
                                 <div class="card-body">
-                                    <h5 class="card-title">Dish 1</h5>
-                                    <p class="card-text">Delicious description of dish 1 goes here!</p>
+                                    <h5 class="card-title">Dal makhni with paneer corma alongwith sunflower salids
+                                    </h5>
+                                    <p class="card-text">Dal makhni well cooked in slow temperature in ecofriendly
+                                        environment</p>
                                 </div>
                             </div>
                         </div>
@@ -106,8 +153,8 @@ class="d-flex flex-column justify-content-center text-white">
                             <div class="card shadow border-light">
                                 <img src="assets/f2.jpg" class="card-img-top" alt="Dish 2">
                                 <div class="card-body">
-                                    <h5 class="card-title">Dish 2</h5>
-                                    <p class="card-text">Mouthwatering description of dish 2 goes here!</p>
+                                    <h5 class="card-title">Butter Nan with Dal and Paneer Bharta</h5>
+                                    <p class="card-text">Our experimented dish as Paneer Bharta</p>
                                 </div>
                             </div>
                         </div>
@@ -115,205 +162,228 @@ class="d-flex flex-column justify-content-center text-white">
                             <div class="card shadow border-light">
                                 <img src="assets/f3.jpg" class="card-img-top" alt="Dish 3">
                                 <div class="card-body">
-                                    <h5 class="card-title">Dish 3</h5>
-                                    <p class="card-text">A customer favorite description of dish 3 goes here!</p>
+                                    <h5 class="card-title">jeera Rice</h5>
+                                    <p class="card-text">A Rice with extra flavour of corriander leaves. Served after
+                                        removal of starch</p>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-4 mb-4">
-                            <div class="card shadow border-light">
-                                <img src="assets/f4.jpg" class="card-img-top" alt="Dish 3">
-                                <div class="card-body">
-                                    <h5 class="card-title">Dish 3</h5>
-                                    <p class="card-text">A customer favorite description of dish 3 goes here!</p>
+                        <div class="row">
+                            <div class="col-md-4 mb-4">
+                                <div class="card shadow border-light">
+                                    <img src="assets/f4.jpg" class="card-img-top" alt="Dish 1">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Veg Pakode</h5>
+                                        <p class="card-text">Indian loving dish cooked with Gram besan in ecofriendly
+                                            way</p>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col-md-4 mb-4">
-                            <div class="card shadow border-light">
-                                <img src="assets/f5.jpg" class="card-img-top" alt="Dish 3">
-                                <div class="card-body">
-                                    <h5 class="card-title">Dish 3</h5>
-                                    <p class="card-text">A customer favorite description of dish 3 goes here!</p>
+                            <div class="col-md-4 mb-4">
+                                <div class="card shadow border-light">
+                                    <img src="assets/f8.jpg" class="card-img-top" alt="Dish 2">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Veg soup</h5>
+                                        <p class="card-text">Our special veg soup cooked for 5 hours to give you proper
+                                            taste</p>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col-md-4 mb-4">
-                            <div class="card shadow border-light">
-                                <img src="assets/f6.jpg" class="card-img-top" alt="Dish 3">
-                                <div class="card-body">
-                                    <h5 class="card-title">Dish 3</h5>
-                                    <p class="card-text">A customer favorite description of dish 3 goes here!</p>
+                            <div class="col-md-4 mb-4">
+                                <div class="card shadow border-light">
+                                    <img src="assets/f9.jpg" class="card-img-top" alt="Dish 3">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Balti dal</h5>
+                                        <p class="card-text">Special dal makhni in white butter</p>
+                                    </div>
                                 </div>
                             </div>
+
+                            <!-- Add more dishes as needed -->
                         </div>
-                        <div class="col-md-4 mb-4">
-                            <div class="card shadow border-light">
-                                <img src="assets/f7.jpg" class="card-img-top" alt="Dish 3">
-                                <div class="card-body">
-                                    <h5 class="card-title">Dish 3</h5>
-                                    <p class="card-text">A customer favorite description of dish 3 goes here!</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4 mb-4">
-                            <div class="card shadow border-light">
-                                <img src="assets/f8.jpg" class="card-img-top" alt="Dish 3">
-                                <div class="card-body">
-                                    <h5 class="card-title">Dish 3</h5>
-                                    <p class="card-text">A customer favorite description of dish 3 goes here!</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4 mb-4">
-                            <div class="card shadow border-light">
-                                <img src="assets/f9.jpg" class="card-img-top" alt="Dish 3">
-                                <div class="card-body">
-                                    <h5 class="card-title">Dish 3</h5>
-                                    <p class="card-text">A customer favorite description of dish 3 goes here!</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4 mb-4">
-                            <div class="card shadow border-light">
-                                <img src="assets/f10.jpg" class="card-img-top" alt="Dish 3">
-                                <div class="card-body">
-                                    <h5 class="card-title">Dish 3</h5>
-                                    <p class="card-text">A customer favorite description of dish 3 goes here!</p>
-                                </div>
-                            </div>
-                        </div>
+                        <!-- Add more dishes as needed -->
                     </div>
+                </section>
+            </div>
+
+            <div class="col-md-4">
+                <section id="promo-videos">
+                    <h2>Experience the Flavor! 🎥✨</h2>
+                    <p>Join us on a culinary journey as we bring our vibrant dishes to life! Check out our latest promotional videos featuring mouthwatering meals and behind-the-scenes fun.</p>
+                    
+                    <div class="mb-4">
+                        <blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/reel/DBT5mAJByZj/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="14" style="background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%;">
+                            <div style="padding:16px;">
+                                <a href="https://www.instagram.com/reel/DBT5mAJByZj/?utm_source=ig_embed&amp;utm_campaign=loading" style="background:#FFFFFF; line-height:0; padding:0 0; text-align:center; text-decoration:none; width:100%;" target="_blank">
+                                    <div style="display: flex; flex-direction: row; align-items: center;">
+                                        <div style="background-color: #F4F4F4; border-radius: 50%; height: 40px; margin-right: 14px; width: 40px;"></div>
+                                        <div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center;">
+                                            <div style="background-color: #F4F4F4; border-radius: 4px; height: 14px; margin-bottom: 6px; width: 100px;"></div>
+                                            <div style="background-color: #F4F4F4; border-radius: 4px; height: 14px; width: 60px;"></div>
+                                        </div>
+                                    </div>
+                                    <div style="padding: 19% 0;"></div>
+                                    <div style="display:block; height:50px; margin:0 auto 12px; width:50px;">
+                                        <svg width="50px" height="50px" viewBox="0 0 60 60" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                                            <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                                <g fill="#000000">
+                                                    <path d="M556.869,30.41 C554.814,30.41 553.148,32.076 553.148,34.131 C553.148,36.186 554.814,37.852 556.869,37.852 C558.924,37.852 560.59,36.186 560.59,34.131 C560.59,32.076 558.924,30.41 556.869,30.41 M541,60.657 C535.114,60.657 530.342,55.887 530.342,50 C530.342,44.114 535.114,39.342 541,39.342 C546.887,39.342 551.658,44.114 551.658,50 C551.658,55.887 546.887,60.657 541,60.657 M541,33.886 C532.1,33.886 524.886,41.1 524.886,50 C524.886,58.899 532.1,66.113 541,66.113 C549.9,66.113 557.115,58.899 557.115,50 C557.115,41.1 549.9,33.886 541,33.886 M565.378,62.101 C565.244,65.022 564.756,66.606 564.346,67.663 C563.803,69.06 563.154,70.057 562.106,71.106 C561.058,72.155 560.06,72.803 558.662,73.347 C557.607,73.757 556.021,74.244 553.102,74.378 C549.944,74.521 548.997,74.552 541,74.552 C533.003,74.552 532.056,74.521 528.898,74.378 C525.979,74.244 524.393,73.757 523.338,73.347 C521.94,72.803 520.942,72.155 519.894,71.106 C518.846,70.057 518.197,69.06 517.654,67.663 C517.244,66.606 516.755,65.022 516.623,62.101 C516.479,58.943 516.448,57.996 516.448,50 C516.448,42.003 516.479,41.056 516.623,37.899 C516.755,34.978 517.244,33.391 517.654,32.338 C518.197,30.938 518.846,29.942 519.894,28.894 C520.942,27.846 521.94,27.196 523.338,26.654 C524.393,26.244 525.979,25.756 528.898,25.623 C532.057,25.479 533.004,25.448 541,25.448 C548.997,25.448 549.943,25.479 553.102,25.623 C556.021,25.756 557.607,26.244 558.662,26.654 C560.06,27.196 561.058,27.846 562.106,28.894 C563.154,29.942 563.803,30.938 564.346,32.338 C564.756,33.391 565.244,34.978 565.378,37.899 C565.522,41.056 565.552,42.003 565.552,50 C565.552,57.996 565.522,58.943 565.378,62.101 M570.82,37.631 C570.674,34.438 570.167,32.258 569.425,30.349 C568.659,28.377 567.633,26.702 565.965,25.035 C564.297,23.368 562.623,22.342 560.652,21.575 C558.743,20.834 556.562,20.326 553.369,20.18 C550.169,20.033 549.148,20 541,20 C532.853,20 531.831,20.033 528.631,20.18 C525.438,20.326 523.257,20.834 521.349,21.575 C519.376,22.342 517.703,23.368 516.035,25.035 C514.368,26.702 513.342,28.377 512.574,30.349 C511.834,32.258 511.326,34.438 511.181,37.631 C511.035,40.831 511,41.851 511,50 C511,58.147 511.035,59.17 511.181,62.369 C511.326,65.562 511.834,67.743 512.574,69.651 C513.342,71.625 514.368,73.296 516.035,74.965 C517.703,76.634 519.376,77.658 521.349,78.425 C523.257,79.167 525.438,79.673 528.631,79.82 C531.831,79.965 532.853,80.001 541,80.001 C549.148,80.001 550.169,79.965 553.369,79.82 C556.562,79.673 558.743,79.167 560.652,78.425 C562.623,77.658 564.297,76.634 565.965,74.965 C567.633,73.296 568.659,71.625 569.425,69.651 C570.167,67.743 570.674,65.562 570.82,62.369 C570.966,59.17 571,58.147 571,50 C571,41.851 570.966,40.831 570.82,37.631"></path>
+                                                </g>
+                                            </g>
+                                        </svg>
+                                    </div>
+                                    <div style="padding-top: 8px;">
+                                        <div style="color:#3897f0; font-family:Arial,sans-serif; font-size:14px; font-weight:550; line-height:18px;">View this post on Instagram</div>
+                                    </div>
+                                    <div style="padding: 12.5% 0;"></div>
+                                    <div style="display: flex; flex-direction: row; margin-bottom: 14px; align-items: center;">
+                                        <div>
+                                            <div style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(0px) translateY(7px);"></div>
+                                            <div style="background-color: #F4F4F4; height: 12.5px; transform: rotate(-45deg) translateX(3px) translateY(1px); width: 12.5px; margin-right: 14px; margin-left: 2px;"></div>
+                                            <div style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(9px) translateY(-18px);"></div>
+                                        </div>
+                                        <div style="margin-left: 8px;">
+                                            <div style="background-color: #F4F4F4; border-radius: 50%; height: 20px; width: 20px;"></div>
+                                            <div style="width: 0; height: 0; border-top: 2px solid transparent; border-left: 6px solid #f4f4f4; border-bottom: 2px solid transparent; transform: translateX(16px) translateY(-4px) rotate(30deg)"></div>
+                                        </div>
+                                        <div style="margin-left: auto;">
+                                            <div style="width: 0px; border-top: 8px solid #F4F4F4; border-right: 8px solid transparent; transform: translateY(16px);"></div>
+                                            <div style="background-color: #F4F4F4; height: 12px; width: 16px; transform: translateY(-4px);"></div>
+                                            <div style="width: 0; height: 0; border-top: 8px solid #F4F4F4; border-left: 8px solid transparent; transform: translateY(-4px) translateX(8px);"></div>
+                                        </div>
+                                    </div>
+                                    <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 24px;">
+                                        <div style="background-color: #F4F4F4; border-radius: 4px; height: 14px; margin-bottom: 6px; width: 224px;"></div>
+                                        <div style="background-color: #F4F4F4; border-radius: 4px; height: 14px; width: 144px;"></div>
+                                    </div>
+                                </a>
+                                <p style="color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;">
+                                    <a href="https://www.instagram.com/reel/DBT5mAJByZj/?utm_source=ig_embed&amp;utm_campaign=loading" style="color:#c9c8cd; text-decoration:none;" target="_blank">A post shared by Raebareli street food (@raebarelistreetfood_up33)</a>
+                                </p>
+                            </div>
+                        </blockquote>
+                        <script async src="//www.instagram.com/embed.js"></script>
+                    </div>
+            
+                    <div class="mb-4">
+                        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DA551k6odzF/?utm_source=ig_embed" data-instgrm-version="14" style="max-width:540px; width:100%;">
+                            <a href="https://www.instagram.com/reel/DA551k6odzF/?utm_source=ig_embed" target="_blank">View this post on Instagram</a>
+                        </blockquote>
+                    </div>
+                    <script async src="https://www.instagram.com/embed.js"></script>
                 </section>
             </div>
             
         </div>
-        
-        <div class="col-md-4">
-            <section id="promo-videos">
-                <h2>Check Out Our Promotional Videos!</h2>
-                <div class="mb-4">
-                    <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DA551k6odzF/?utm_source=ig_embed" data-instgrm-version="14" style="max-width:540px; width:99.375%;">
-                        <a href="https://www.instagram.com/reel/DA551k6odzF/?utm_source=ig_embed" target="_blank">View this post on Instagram</a>
-                    </blockquote>
-                </div>
+    </div>
+
+    <section id="feedback" class="container my-5">
+        <h2 class="text-center mb-4">Our happy Customers (God)</h2>
+        <div class="feedback-list">
+            <div class="customer-feedback d-flex align-items-start">
+                <img src="assets/f6.jpg" alt="User 1" class="customer-img">
                 <div>
-                    <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DA12345678/?utm_source=ig_embed" data-instgrm-version="14" style="max-width:540px; width:99.375%;">
-                        <a href="https://www.instagram.com/reel/DA12345678/?utm_source=ig_embed" target="_blank">View this post on Instagram</a>
-                    </blockquote>
+                    <p><strong>Aarav Sharma</strong></p>
+                    <p>Absolutely loved the food! A true delight for my taste buds!</p>
                 </div>
-                <script async src="https://www.instagram.com/embed.js"></script>
-            </section>
+            </div>
+            <div class="customer-feedback d-flex align-items-start">
+                <img src="assets/f7.jpg" alt="User 2" class="customer-img">
+                <div>
+                    <p><strong>Radha Gupta</strong></p>
+                    <p>Had a fantastic experience! The service was top-notch!</p>
+                </div>
+            </div>
+            <div class="customer-feedback d-flex align-items-start">
+                <img src="assets/customer.jfif" alt="User 3" class="customer-img">
+                <div>
+                    <p><strong>Rohit Verma</strong></p>
+                    <p>Best dining experience ever! Can’t wait to visit again!</p>
+                </div>
+            </div>
+            <div class="customer-feedback d-flex align-items-start">
+                <img src="assets/logo.jfif" alt="User 4" class="customer-img">
+                <div>
+                    <p><strong>Sneha Rao</strong></p>
+                    <p>The ambiance was enchanting, and the food was out of this world!</p>
+                </div>
+            </div>
         </div>
-    </div>
-</div>
+    </section>
+    
 
-<section id="feedback" class="container my-5">
-    <h2 class="text-center mb-4">User Feedback</h2>
+    <section id="profile" class="bg-light py-5">
+        <div class="container">
+            <h2 class="text-center">User Profile</h2>
+            <form id="profileForm">
+                <div class="form-group">
+                    <label for="profileName">Name</label>
+                    <input type="text" class="form-control" id="profileName" required>
+                </div>
+                <div class="form-group">
+                    <label for="profileEmail">Email</label>
+                    <input type="email" class="form-control" id="profileEmail" required>
+                </div>
+                <div class="form-group">
+                    <label for="profileBio">Bio</label>
+                    <textarea class="form-control" id="profileBio" rows="4" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Update Profile</button>
+            </form>
+        </div>
+    </section>
 
-    <div class="feedback-list">
-        <div class="customer-feedback d-flex align-items-start">
-            <img src="assets/user1.jpg" alt="User 1" class="customer-img">
-            <div>
-                <p><strong>John Doe</strong></p>
-                <p>Wow! The food was absolutely delicious!</p>
-            </div>
+    <section id="reservation" class="bg-light py-5">
+        <div class="container">
+            <h2 class="text-center">Book a Table</h2>
+            <form id="reservationForm">
+                <div class="form-group">
+                    <label for="reservationName">Name</label>
+                    <input type="text" class="form-control" id="reservationName" required>
+                </div>
+                <div class="form-group">
+                    <label for="reservationDate">Date</label>
+                    <input type="date" class="form-control" id="reservationDate" required>
+                </div>
+                <div class="form-group">
+                    <label for="reservationTime">Time</label>
+                    <input type="time" class="form-control" id="reservationTime" required>
+                </div>
+                <div class="form-group">
+                    <label for="reservationGuests">Number of Guests</label>
+                    <input type="number" class="form-control" id="reservationGuests" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Reserve Now</button>
+            </form>
         </div>
-        <div class="customer-feedback d-flex align-items-start">
-            <img src="assets/user2.jpg" alt="User 2" class="customer-img">
-            <div>
-                <p><strong>Jane Smith</strong></p>
-                <p>Had a great time, the service was excellent!</p>
-            </div>
-        </div>
-        <div class="customer-feedback d-flex align-items-start">
-            <img src="assets/user3.jpg" alt="User 3" class="customer-img">
-            <div>
-                <p><strong>Michael Johnson</strong></p>
-                <p>Best experience ever! Will definitely come back.</p>
-            </div>
-        </div>
-        <div class="customer-feedback d-flex align-items-start">
-            <img src="assets/user4.jpg" alt="User 4" class="customer-img">
-            <div>
-                <p><strong>Emily Davis</strong></p>
-                <p>The ambiance was amazing, and the food was out of this world!</p>
-            </div>
-        </div>
-    </div>
-</section>
+    </section>
 
-<section id="profile" class="bg-light py-5">
-    <div class="container">
-        <h2 class="text-center">User Profile</h2>
-        <form id="profileForm">
+    <section id="contact" class="container my-5">
+        <h2 class="text-center">Contact Us</h2>
+        <form id="contactForm">
             <div class="form-group">
-                <label for="profileName">Name</label>
-                <input type="text" class="form-control" id="profileName" required>
+                <label for="contactName">Name</label>
+                <input type="text" class="form-control" id="contactName" required>
             </div>
             <div class="form-group">
-                <label for="profileEmail">Email</label>
-                <input type="email" class="form-control" id="profileEmail" required>
+                <label for="contactEmail">Email</label>
+                <input type="email" class="form-control" id="contactEmail" required>
             </div>
             <div class="form-group">
-                <label for="profileBio">Bio</label>
-                <textarea class="form-control" id="profileBio" rows="4" required></textarea>
+                <label for="contactMessage">Message</label>
+                <textarea class="form-control" id="contactMessage" rows="4" required></textarea>
             </div>
-            <button type="submit" class="btn btn-primary">Update Profile</button>
+            <button type="submit" class="btn btn-primary">Send Message</button>
         </form>
-    </div>
-</section>
+    </section>
 
-<section id="reservation" class="bg-light py-5">
-    <div class="container">
-        <h2 class="text-center">Book a Table</h2>
-        <form id="reservationForm">
-            <div class="form-group">
-                <label for="name">Name</label>
-                <input type="text" class="form-control" id="name" required>
-            </div>
-            <div class="form-group">
-                <label for="date">Date</label>
-                <input type="date" class="form-control" id="date" required>
-            </div>
-            <div class="form-group">
-                <label for="time">Time</label>
-                <input type="time" class="form-control" id="time" required>
-            </div>
-            <div class="form-group">
-                <label for="people">Number of People</label>
-                <input type="number" class="form-control" id="people" required>
-            </div>
-            <button type="submit" class="btn btn-primary">Reserve Now</button>
-        </form>
-    </div>
-</section>
+    <footer class="text-center bg-success text-white py-4">
+        <p>&copy; 2024 4Brothers Dawat. All Rights Reserved.</p>
+    </footer>
 
-<section id="contact" class="container my-5">
-    <h2 class="text-center">Contact Us</h2>
-    <form id="contactForm">
-        <div class="form-group">
-            <label for="contactName">Name</label>
-            <input type="text" class="form-control" id="contactName" required>
-        </div>
-        <div class="form-group">
-            <label for="contactEmail">Email</label>
-            <input type="email" class="form-control" id="contactEmail" required>
-        </div>
-        <div class="form-group">
-            <label for="contactMessage">Message</label>
-            <textarea class="form-control" id="contactMessage" rows="4" required></textarea>
-        </div>
-        <button type="submit" class="btn btn-primary">Send Message</button>
-    </form>
-</section>
-
-<footer class="text-center bg-success text-white py-4">
-    <p>&copy; 2023 4Brothers Dawat. All Rights Reserved.</p>
-</footer>
-
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
+
 </html>
