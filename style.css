@@ -38,7 +38,12 @@ footer {
 /* Responsive adjustments */
 
 
-
+.custom-background {
+    background: url('./assets/bg2.png') no-repeat center center;
+    background-size: cover;
+    height: 100vh; /* Adjust this as needed */
+    width: 100%; /* Ensures full width */
+}
 
 
 header h1 {

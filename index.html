@@ -89,14 +89,16 @@
 
         /* Header styling */
         header {
-            background: url('./assets/bg2.png') no-repeat center center;
-            background-size: cover;
-            /* Ensures the image covers the entire area */
-            height: 100vh;
-            /* Full viewport height */
-            padding: 0;
-            /* Remove padding for full height */
-            transition: background 0.5s ease;
+            
+            background: url('./assets/bg2.png') no-repeat center center; /* Background image */
+    background-size: cover; /* Cover the entire header */
+    height: 100vh; /* Full viewport height */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; /* Center items vertically and horizontally */
+    text-align: center; /* Center text */
+    color: white; /* Default text color */
         }
 
         @media (max-width: 768px) {
@@ -140,13 +142,11 @@
 
 <body>
 
-    <header class="d-flex flex-column justify-content-center text-white">
-        <div class="container">
+    <header class="d-flex flex-column justify-content-center text-white" >
+        <div class="container text-center">
             <!-- <div class="row align-items-center">
-                <div class="col-3">
-                    <img src="assets/logo.jfif" alt="4Brothers Dawat Logo" class="logo">
-                </div>
-                <div class="col-9 text-center">
+                <div class="col-12">
+                    <img src="assets/logo.jfif" alt="4Brothers Dawat Logo" class="logo" />
                     <h1 style="color: #334fbb;">Welcome to 4Brothers Dawat Restaurant</h1>
                     <p style="color: #392541;">Surety of purity</p>
                 </div>
