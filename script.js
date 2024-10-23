@@ -13,12 +13,13 @@ document.getElementById("contactForm").addEventListener("submit", function(event
     
 
       const images = [
-        'url(./assets/bg2.png)',
+        'url(./assets/logo.jfif)',
         'url(./assets/karwa.jpg)',
         'url(./assets/f1.jpg)',
         'url(./assets/f2.jpg)',
-        'url(./assets/bg1.jfif)',
-        'url(./assets/customer.jfif)'
+        'url(./assets/f4.jpg)',
+        'url(./assets/f6.jpg)',
+        'url(./assets/bg1.jfif)'
     ];
 
     let currentIndex = 0;
@@ -47,7 +48,7 @@ document.getElementById("contactForm").addEventListener("submit", function(event
 
         function resetInterval() {
             clearInterval(interval);
-            interval = setInterval(nextSlide, 4000); // Change image every 4 seconds
+            interval = setInterval(nextSlide, 2000); // Change image every 4 seconds
         }
 
         // Start with the first image and auto-scroll
