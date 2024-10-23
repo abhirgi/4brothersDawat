@@ -6,153 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>4Brothers Dawat</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    <style>
-        /* Circular logo */
-        .col-md-4>.card {
-            background-color: hsl(353.7, 35.8%, 89.6%) !important
-                /* Margin for direct child cards */
-        }
-
-        .navbar {
-            padding: 1rem;
-            background-color: #212529;
-            /* Dark navbar color */
-            transition: background-color 0.3s ease;
-            /* Smooth transition */
-        }
-
-        .navbar-brand img {
-            height: 60px;
-            /* Adjust the logo height */
-            margin-right: 1px;
-            /* Spacing between logo and text */
-        }
-
-        .nav-link {
-            font-weight: 500;
-            color: #ffffff;
-            /* White text for nav links */
-            transition: color 0.3s ease;
-            /* Smooth transition for link color */
-        }
-
-        .nav-link:hover {
-            color: #61dafb;
-            /* Hover color (light blue) */
-        }
-
-        .navbar-toggler {
-            border-color: rgba(255, 255, 255, 0.1);
-            /* Toggler border color */
-        }
-
-        .navbar-toggler-icon {
-            background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30' fill='white'%3E%3Cpath stroke='white' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
-            /* White toggler icon */
-        }
-
-        .logo {
-            border-radius: 37%;
-            width: 25vw;
-            /* Responsive size */
-            height: auto;
-            /* Maintain aspect ratio */
-            object-fit: cover;
-            margin-left: -1vw;
-            /* Adjusted for responsiveness */
-        }
-
-        /* Circular images for feedback */
-        .customer-img {
-            border-radius: 50%;
-            width: 15vw;
-            /* Responsive size */
-            height: 15vw;
-            /* Responsive size */
-            object-fit: cover;
-            margin-right: 2vw;
-            /* Adjusted for responsiveness */
-        }
-
-        .customer-feedback {
-            margin-bottom: 4vw;
-            background-color: #d9c9c9;
-            /* Adjusted for responsiveness */
-        }
-
-        /* Map styling */
-        .map-container {
-            width: 100%;
-            height: 50vh;
-            /* Increased height for better visibility */
-        }
-
-        /* Header styling */
-        header {
-            
-            background: url('./assets/bg2.png') no-repeat center center; /* Background image */
-    background-size: cover; /* Cover the entire header */
-    height: 100vh; /* Full viewport height */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center; /* Center items vertically and horizontally */
-    text-align: center; /* Center text */
-    color: white; /* Default text color */
-        }
-
-        @media (max-width: 768px) {
-            header {
-                height: 80vh;
-                /* Adjust height for smaller screens */
-                background-attachment: scroll;
-                /* Disable fixed background on smaller screens */
-                background-position: center;
-                /* Center the background */
-            }
-
-            .logo {
-                width: 50vw;
-                /* Adjust logo size for mobile */
-            }
-
-            h1 {
-                font-size: 2rem;
-                /* Adjust heading size for mobile */
-            }
-
-            p {
-                font-size: 1.2rem;
-                /* Adjust paragraph size for mobile */
-            }
-        }
-
-        @media (max-width: 576px) {
-            header {
-                height: 60vh;
-                /* Further adjust height for very small screens */
-                background-position: center;
-                /* Center the image */
-                background-size: cover;
-                /* Keep it covering the area */
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
+    
+    
 </head>
 
 <body>
 
-    <header class="d-flex flex-column justify-content-center text-white" >
-        <div class="container text-center">
-            <!-- <div class="row align-items-center">
-                <div class="col-12">
-                    <img src="assets/logo.jfif" alt="4Brothers Dawat Logo" class="logo" />
-                    <h1 style="color: #334fbb;">Welcome to 4Brothers Dawat Restaurant</h1>
-                    <p style="color: #392541;">Surety of purity</p>
-                </div>
-            </div> -->
-        </div>
+   
+    <header id="header">
+        <div class="background"></div> <!-- Overlay for background image -->
+      
     </header>
+
 
     <nav class="navbar navbar-expand-lg navbar-dark shadow">
         <a class="navbar-brand" href="#">
@@ -491,5 +357,7 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
+<script src="script.js"></script>
+
 
 </html>

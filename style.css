@@ -40,7 +40,7 @@ footer {
 
 .custom-background {
     background: url('./assets/bg2.png') no-repeat center center;
-    background-size: cover;
+    background-size: contain;
     height: 100vh; /* Adjust this as needed */
     width: 100%; /* Ensures full width */
 }
@@ -73,3 +73,130 @@ header:hover h1, header:hover p {
     max-width: 100%; /* Make it responsive */
     width: 100%;     /* Ensure it takes full width */
 }
+
+.slider {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+.slides {
+    display: flex;
+    transition: transform 0.5s ease;
+    width: 100%;
+    height: 100%;
+}
+.slide {
+    min-width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+}
+
+header {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: opacity 0.5s ease, transform 0.5s ease; /* Transition for fading and scaling */
+    opacity: 1; /* Initially visible */
+    z-index: 0; /* Behind other content */
+}
+
+/* Circular logo */
+.col-md-4>.card {
+    background-color: hsl(353.7, 35.8%, 89.6%) !important
+        /* Margin for direct child cards */
+}
+
+.navbar {
+    padding: 1rem;
+    background-color: #212529;
+    /* Dark navbar color */
+    transition: background-color 0.3s ease;
+    /* Smooth transition */
+}
+
+.navbar-brand img {
+    height: 60px;
+    /* Adjust the logo height */
+    margin-right: 1px;
+    /* Spacing between logo and text */
+}
+
+.nav-link {
+    font-weight: 500;
+    color: #ffffff;
+    /* White text for nav links */
+    transition: color 0.3s ease;
+    /* Smooth transition for link color */
+}
+
+.nav-link:hover {
+    color: #61dafb;
+    /* Hover color (light blue) */
+}
+
+.navbar-toggler {
+    border-color: rgba(255, 255, 255, 0.1);
+    /* Toggler border color */
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30' fill='white'%3E%3Cpath stroke='white' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+    /* White toggler icon */
+}
+
+.logo {
+    border-radius: 37%;
+    width: 25vw;
+    /* Responsive size */
+    height: auto;
+    /* Maintain aspect ratio */
+    object-fit: cover;
+    margin-left: -1vw;
+    /* Adjusted for responsiveness */
+}
+
+/* Circular images for feedback */
+.customer-img {
+    border-radius: 50%;
+    width: 15vw;
+    /* Responsive size */
+    height: 15vw;
+    /* Responsive size */
+    object-fit: cover;
+    margin-right: 2vw;
+    /* Adjusted for responsiveness */
+}
+
+.customer-feedback {
+    margin-bottom: 4vw;
+    background-color: #d9c9c9;
+    /* Adjusted for responsiveness */
+}
+
+/* Map styling */
+.map-container {
+    width: 100%;
+    height: 50vh;
+    /* Increased height for better visibility */
+}
+
+/* Header styling */
