@@ -17,8 +17,8 @@ document.getElementById("contactForm").addEventListener("submit", function(event
         'url(./assets/karwa.jpg)',
         'url(./assets/f1.jpg)',
         'url(./assets/f2.jpg)',
-        'url(./assets/menu1.png)',
-        'url(./assets/menu2.png)'
+        'url(./assets/bg1.jfif)',
+        'url(./assets/customer.jfif)'
     ];
 
     let currentIndex = 0;
