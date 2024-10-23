@@ -119,6 +119,27 @@ header {
     z-index: 0; /* Behind other content */
 }
 
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+    header {
+        height: 80vh; /* Adjust height for tablets */
+    }
+
+    .background {
+        background-position: center; /* Center the background image */
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        height: 60vh; /* Further adjust height for mobile */
+    }
+
+    .background {
+        background-position: center; /* Center the background image */
+    }
+}
+
 /* Circular logo */
 .col-md-4>.card {
     background-color: hsl(353.7, 35.8%, 89.6%) !important
